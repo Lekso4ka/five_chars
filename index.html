@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="functions.js"></script>
+	<link rel="stylesheet" href="./bootstrap-icons/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="caption"></div>
+		<div class="mask">
+			<label> Введите буквы или *
+				<input type="text" placeholder="**о*о" maxlength="5">
+			</label>
+			<button class="findBtn"><i class="bi bi-search"></i></button>
+			<button class="randBtn">Случайное слово</button>
+			<button class="vowels3Btn"><i class="bi bi-3-circle"></i> гласные</button>
+			<button class="vowels2Btn"><i class="bi bi-2-circle"></i> гласные</button>
+			<button class="resetBtn"><i class="bi bi-x-circle"></i></button>
+		</div>
+		<div class="abc">
+			<div>
+				<h2>Присутствующие буквы</h2>
+				<div class="chars charsTrue"></div>
+			</div>
+			<div>
+				<h2>Отсутствующие буквы</h2>
+				<div class="chars charsFalse"></div>
+			</div>
+
+		</div>
+		<div class="words"></div>
+<!--		<div class="abc false"></div>-->
+<!--		<div class="abc true"></div>-->
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
