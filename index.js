@@ -19,7 +19,8 @@ for (let i = 0; i < abc.length; i++) {
 	abcFalse.innerHTML += `<div class="char char_f">${abc[i]}</div>`;
 }
 let findWords = [];
-fetch("./words.json")
+//fetch("./words.json")
+fetch("./v1/words.json")
 	.then(res => res.json())
 	.then(words => {
 		words.sort();
