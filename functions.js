@@ -67,11 +67,12 @@ const findWithVowels = (n = 3, arr) => {
                 flag = false;
                 break;
             }
-            if (flag) {
+            if (flag && !result.includes(word)) {
                 result.push(word);
             }
         }
     })
+    result.sort();
     return result;
 }
 
