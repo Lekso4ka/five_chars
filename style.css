@@ -34,7 +34,6 @@ button {
 
 .mask>label {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 .mask .buttons {
@@ -45,14 +44,21 @@ button {
 .mask button {
     border: 1px solid silver;
     box-sizing: border-box;
-    padding: 6px 12px;
     font-size: 24px;
     border-radius: 4px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .mask button {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+.mask input {
+    width: 48px;
 }
 
 .words {

@@ -1,11 +1,12 @@
 const caption = document.querySelector(".caption")
 const maskTag = document.querySelector(".mask");
-const mask = maskTag.querySelector("input");
+const mask = maskTag.querySelectorAll("input");
 const findBtn = maskTag.querySelector(".findBtn");
 const randBtn = maskTag.querySelector(".randBtn");
 const resetBtn = maskTag.querySelector(".resetBtn");
 const vowels2Btn = maskTag.querySelector(".vowels2Btn");
 const vowels3Btn = maskTag.querySelector(".vowels3Btn");
+const vowels4Btn = maskTag.querySelector(".vowels4Btn");
 const wordsTag = document.querySelector(".words");
 const abcTrue = document.querySelector(".charsTrue");
 const abcFalse = document.querySelector(".charsFalse");
@@ -30,7 +31,10 @@ fetch("./words.json")
 		setCaption(caption, findWords);
 		setWords(wordsTag, findWords);
 		findBtn.addEventListener("click", e => {
-			let data = mask.value;
+			let data = "";
+			mask.forEach(inp => {
+				data += inp.value || "*";
+			})
 			const reg = new RegExp(data.replace(/\*/g, "."))
 			totalWords = words.filter(w => reg.test(w));
 			findWords = findByChars(totalWords)
@@ -38,13 +42,22 @@ fetch("./words.json")
 			setWords(wordsTag, findWords);
 		})
 		randBtn.addEventListener("click", e => {
-			const n = getRandom(totalWords.length);
-			mask.value = totalWords[n];
+			const n = getRandom(words.length);
+			const word = words[n];
+			mask.forEach((inp, i) => {
+				inp.value = word[i];
+			})
 			findBtn.click();
 		})
 		resetBtn.addEventListener("click", e => {
 			totalWords = [...words];
 			findWords = findByChars(words);
+			setCaption(caption, findWords);
+			setWords(wordsTag, findWords);
+		})
+		vowels4Btn.addEventListener("click", e => {
+			totalWords = findWithVowels(4, words)
+			findWords = findByChars(totalWords)
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 		})

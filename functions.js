@@ -9,14 +9,20 @@ const pluralize = (n, w0, w1, w2) => {
     return w0;
 }
 
-const getWordWithVowels = (n = 3, arr) => {
+const getWordWithVowels = (n = 3) => {
     const vowels = ["а","е","ё","и","о","у","ы","э","ю","я"];
     const manyVowels = []
     for (let i = 0, cnt = vowels.length; i < cnt; i++) {
         for (let j = i + 1; j < cnt; j++) {
-            if (n === 3) {
+            if (n >= 3) {
                 for (let k = j + 1; k < cnt; k++) {
-                    manyVowels.push([vowels[i], vowels[j], vowels[k]]);
+                    if (n === 4) {
+                        for (let l = k + 1; l < cnt; l++) {
+                            manyVowels.push([vowels[i], vowels[j], vowels[k], vowels[l]]);
+                        }
+                    } else {
+                        manyVowels.push([vowels[i], vowels[j], vowels[k]]);
+                    }
                 }
             } else {
                 manyVowels.push([vowels[i], vowels[j]]);

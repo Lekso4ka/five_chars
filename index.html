@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="broke.js"></script>
-	<script src="green.js"></script>
-	<script src="has.js"></script>
-	<script src="past_words.js"></script>
+	<script src="check/broke.js"></script>
+	<script src="check/green.js"></script>
+	<script src="check/has.js"></script>
+	<script src="check/past_words.js"></script>
 	<script src="functions.js"></script>
 	<link rel="stylesheet" href="./bootstrap-icons/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -16,12 +16,20 @@
 	<div class="wrapper">
 		<div class="caption"></div>
 		<div class="mask">
-			<label> Введите буквы или *
-				<input type="text" placeholder="**о*о" maxlength="5">
+			<label>
+				<input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
+				<input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
+				<input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
+				<input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
+				<input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
 			</label>
 			<button class="findBtn"><i class="bi bi-search"></i></button>
 			<div class="buttons">
 				<button class="randBtn">Случайное слово</button>
+				<button class="vowels4Btn">
+					<i class="bi bi-4-circle"></i>
+					<span>гласные</span>
+				</button>
 				<button class="vowels3Btn">
 					<i class="bi bi-3-circle"></i>
 					<span>гласные</span>
