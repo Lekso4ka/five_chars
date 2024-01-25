@@ -58,18 +58,27 @@ fetch("./words.json")
 		vowels4Btn.addEventListener("click", e => {
 			totalWords = findWithVowels(4, words)
 			findWords = findByChars(totalWords)
+			mask.forEach(inp => {
+				inp.value = "";
+			})
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 		})
 		vowels3Btn.addEventListener("click", e => {
 			totalWords = findWithVowels(3, words)
 			findWords = findByChars(totalWords)
+			mask.forEach(inp => {
+				inp.value = "";
+			})
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 		})
 		vowels2Btn.addEventListener("click", e => {
 			totalWords = findWithVowels(2, words)
 			findWords = findByChars(totalWords)
+			mask.forEach(inp => {
+				inp.value = "";
+			})
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 		})
