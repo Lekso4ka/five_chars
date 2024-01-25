@@ -23,6 +23,7 @@ fetch("./words.json")
 //fetch("./v1/words.json")
 	.then(res => res.json())
 	.then(words => {
+		words = words.filter(w => !bedWords.includes(w))
 		words.sort();
 		totalWords = [...words];
 		findWords = findByChars(words);

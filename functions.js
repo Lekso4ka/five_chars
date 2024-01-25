@@ -34,7 +34,18 @@ const setCaption = (tag, arr) => {
 }
 
 const setWords = (tag, arr) => {
-    const result = arr.map(w => `<span>${w}</span>`);
+    const result = arr.map(w => {
+        if (past.includes(w)) {
+            return `<span class="has">${w}</span>`
+        }
+        if (pastWords.includes(w)) {
+            return `<span class="has">${w}</span>`
+        }
+        if (isWords.includes(w)) {
+            return `<span class="green">${w}</span>`
+        }
+        return `<span>${w}</span>`
+    });
     tag.innerHTML = result.join("");
 }
 

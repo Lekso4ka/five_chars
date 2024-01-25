@@ -156,3 +156,9 @@ button {
     color: silver;
     box-shadow: none;
 }
+.has {
+    color: orange;
+}
+.word {
+    color: green;
+}
