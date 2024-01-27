@@ -127,6 +127,9 @@ button {
     .vowels3Btn :not(:first-child) {
         display: none;
     }
+    .vowels4Btn :not(:first-child) {
+        display: none;
+    }
     .wrapper {
         grid-template-columns: 1fr;
         height: auto;
