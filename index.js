@@ -7,6 +7,7 @@ const resetBtn = maskTag.querySelector(".resetBtn");
 const vowels2Btn = maskTag.querySelector(".vowels2Btn");
 const vowels3Btn = maskTag.querySelector(".vowels3Btn");
 const vowels4Btn = maskTag.querySelector(".vowels4Btn");
+const uniqBtn = maskTag.querySelector(".uniqChars");
 const wordsTag = document.querySelector(".words");
 const abcTrue = document.querySelector(".charsTrue");
 const abcFalse = document.querySelector(".charsFalse");
@@ -52,6 +53,15 @@ fetch("./words.json")
 		resetBtn.addEventListener("click", e => {
 			totalWords = [...words];
 			findWords = findByChars(words);
+			setCaption(caption, findWords);
+			setWords(wordsTag, findWords);
+		})
+		uniqBtn.addEventListener("click", e => {
+			totalWords = getUniqChars(words)
+			findWords = findByChars(totalWords)
+			mask.forEach(inp => {
+				inp.value = "";
+			})
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 		})

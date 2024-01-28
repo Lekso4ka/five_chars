@@ -102,3 +102,18 @@ const findByChars = (arr) => {
     })
     return result;
 }
+
+
+const getUniqChars = (arr) => {
+    return arr.filter(word => {
+        let result = word
+            .split("")
+            .reduce((acc, char) => {
+                if (!acc.includes(char)) {
+                    acc.push(char)
+                }
+                return acc;
+            }, [])
+        return result.length === 5;
+    })
+}
