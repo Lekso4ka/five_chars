@@ -10,7 +10,7 @@ const pluralize = (n, w0, w1, w2) => {
 }
 
 const getWordWithVowels = (n = 3) => {
-    const vowels = ["а","е","ё","и","о","у","ы","э","ю","я"];
+    const vowels = ["а","е","и","о","у","ы","э","ю","я"];
     const manyVowels = []
     for (let i = 0, cnt = vowels.length; i < cnt; i++) {
         for (let j = i + 1; j < cnt; j++) {
