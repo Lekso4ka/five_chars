@@ -55,6 +55,9 @@ fetch("./words.json")
 			findWords = findByChars(words);
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
+			mask.forEach((inp) => {
+				inp.value = "";
+			})
 		})
 		uniqBtn.addEventListener("click", e => {
 			totalWords = getUniqChars(words)
