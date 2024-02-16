@@ -18,8 +18,8 @@ let totalWords = [];
 const hash = {};
 
 for (let i = 0; i < abc.length; i++) {
-	abcTrue.innerHTML += `<div class="char char_t">${abc[i]}</div>`;
-	abcFalse.innerHTML += `<div class="char char_f">${abc[i]}</div>`;
+	abcTrue.innerHTML += `<div class="char char_t"><span>${abc[i]}</span></div>`;
+	abcFalse.innerHTML += `<div class="char char_f"><span>${abc[i]}</span></div>`;
 }
 let findWords = [];
 fetch("./words.json")

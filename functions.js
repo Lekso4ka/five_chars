@@ -83,14 +83,14 @@ const findByChars = (arr) => {
     arr.forEach(w => {
         let flag = true;
         for (let i = 0; i < charsActiveF.length; i++) {
-            const txt = charsActiveF[i].innerText.toLowerCase()
+            const txt = charsActiveF[i].firstElementChild.innerText.toLowerCase()
             if (w.includes(txt)) {
                 flag = false;
                 break;
             }
         }
         for (let i = 0; i < charsActiveT.length; i++) {
-            const txt = charsActiveT[i].innerText.toLowerCase()
+            const txt = charsActiveT[i].firstElementChild.innerText.toLowerCase()
             if (!w.includes(txt)) {
                 flag = false;
                 break;
