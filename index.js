@@ -15,6 +15,7 @@ const abc = "абвгдежзийклмнопрстуфхцчшщьыъэюя";
 const charsF = document.getElementsByClassName("char_f");
 const charsT = document.getElementsByClassName("char_t");
 let totalWords = [];
+const hash = {};
 
 for (let i = 0; i < abc.length; i++) {
 	abcTrue.innerHTML += `<div class="char char_t">${abc[i]}</div>`;
@@ -27,6 +28,23 @@ fetch("./words.json")
 	.then(words => {
 		words = words.filter(w => !bedWords.includes(w))
 		words.sort();
+		words.forEach(w => {
+			for (let i = 0; i < w.length; i++) {
+				if (hash[w[i]]) {
+					hash[w[i]]++;
+				} else {
+					hash[w[i]] = 1;
+				}
+			}
+		})
+		console.log(hash);
+		for (let i = 0; i < charsT.length; i++) {
+			const txt = charsT[i].innerText.toLowerCase();
+			const tooltip = document.createElement("span");
+			tooltip.className = "tooltip";
+			tooltip.innerText = hash[txt];
+			charsT[i].append(tooltip);
+		}
 		totalWords = [...words];
 		findWords = findByChars(words);
 		setCaption(caption, findWords);
@@ -114,7 +132,7 @@ fetch("./words.json")
 				ct.classList.contains("active")
 					? cf.classList.add("disable")
 					: cf.classList.remove("disable");
-				findWords = findByChars(totalWords)
+				findWords = findByChars(totalWords);
 				setCaption(caption, findWords);
 				setWords(wordsTag, findWords);
 			})
