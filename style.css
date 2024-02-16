@@ -179,6 +179,7 @@ button {
     text-transform: uppercase;
     cursor:  pointer;
     box-shadow: 0 0 5px 0 #0004;
+    position: relative;
 }
 .char_t.active {
     color: mediumseagreen;
@@ -204,4 +205,17 @@ button {
     font-weight: bold;
     border: 1px solid;
     padding: 0 6px;
+}
+.tooltip {
+    position: absolute;
+    bottom: -7px;
+    right: -7px;
+    font-size: .5rem;
+    background-color: rgba(192, 192, 192, 0.5);
+    display: flex;
+    padding: 0.1rem 0.2rem;
+    /* color: #fff; */
+    font-weight: 900;
+    line-height: 1;
+    border-radius: 4px;
 }

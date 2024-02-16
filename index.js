@@ -52,7 +52,7 @@ fetch("./words.json")
 		findBtn.addEventListener("click", e => {
 			let data = "";
 			mask.forEach(inp => {
-				data += inp.value || "*";
+				data += inp.value.toLowerCase() || "*";
 			})
 			const reg = new RegExp(data.replace(/\*/g, "."))
 			totalWords = words.filter(w => reg.test(w));
