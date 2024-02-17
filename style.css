@@ -166,8 +166,11 @@ button {
 
 .abc {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(3, auto) 1fr;
     gap: 20px;
+    height: 100%;
+    overflow: auto;
+    padding-right: 20px;
 }
 .char {
     width: 30px;
@@ -218,4 +221,38 @@ button {
     font-weight: 900;
     line-height: 1;
     border-radius: 4px;
+}
+table {
+    user-select: none;
+    overflow: auto;
+    width: 100%;
+}
+td {
+    padding: 4px 10px;
+    text-align: center;
+}
+th {
+    background-color: silver;
+}
+thead th {
+    padding: 4px 6px;
+    cursor: pointer;
+}
+thead th.ASC {
+    color: green;
+}
+thead th.DSC {
+    color: red;
+}
+.stats {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.stats+table {
+    display: none;
+}
+
+.stats.active+table {
+    display: table;
 }

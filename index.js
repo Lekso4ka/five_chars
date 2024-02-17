@@ -4,6 +4,7 @@ const mask = maskTag.querySelectorAll("input");
 const findBtn = maskTag.querySelector(".findBtn");
 const randBtn = maskTag.querySelector(".randBtn");
 const resetBtn = maskTag.querySelector(".resetBtn");
+const checkBtn = maskTag.querySelector(".check");
 const vowels2Btn = maskTag.querySelector(".vowels2Btn");
 const vowels3Btn = maskTag.querySelector(".vowels3Btn");
 const vowels4Btn = maskTag.querySelector(".vowels4Btn");
@@ -16,6 +17,15 @@ const charsF = document.getElementsByClassName("char_f");
 const charsT = document.getElementsByClassName("char_t");
 let totalWords = [];
 const hash = {};
+
+document.querySelector(".stats").addEventListener("click", (e) => {
+	e.currentTarget.classList.toggle("active");
+	if (e.currentTarget.classList.contains("active")) {
+		e.currentTarget.lastElementChild.className = "bi bi-chevron-up"
+	} else {
+		e.currentTarget.lastElementChild.className = "bi bi-chevron-down"
+	}
+})
 
 for (let i = 0; i < abc.length; i++) {
 	abcTrue.innerHTML += `<div class="char char_t"><span>${abc[i]}</span></div>`;
@@ -68,9 +78,18 @@ fetch("./words.json")
 			})
 			findBtn.click();
 		})
+		checkBtn.addEventListener("click", e => {
+			totalWords = words.filter(w => !pastWords.includes(w) && !past.includes(w) && !isWords.includes(w));
+			findWords = findByChars(totalWords);
+			setCaption(caption, findWords);
+			setWords(wordsTag, findWords);
+			mask.forEach((inp) => {
+				inp.value = "";
+			})
+		})
 		resetBtn.addEventListener("click", e => {
 			totalWords = [...words];
-			findWords = findByChars(words);
+			findWords = findByChars(totalWords);
 			setCaption(caption, findWords);
 			setWords(wordsTag, findWords);
 			mask.forEach((inp) => {
