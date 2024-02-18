@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chars</title>
+  <script src="check/broke.js"></script>
+  <script src="check/green.js"></script>
+  <script src="check/has.js"></script>
+  <script src="check/past_words.js"></script>
+  <script src="functions.js"></script>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="./bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+    18 feb => total 20 447
+        5 uniq	 => 14 901
+        3 vowels =>  1 649
+        2 vowels => 16 360
+-->
+
+<div class="wrapper">
+  <div class="caption"></div>
+  <div class="mask">
+    <label>
+      <input type="text" placeholder="с" maxlength="1" pattern="[А-Яа-яЁё]">
+      <input type="text" placeholder="л" maxlength="1" pattern="[А-Яа-яЁё]">
+      <input type="text" placeholder="о" maxlength="1" pattern="[А-Яа-яЁё]">
+      <input type="text" placeholder="в" maxlength="1" pattern="[А-Яа-яЁё]">
+      <input type="text" placeholder="о" maxlength="1" pattern="[А-Яа-яЁё]">
+    </label>
+    <button class="findBtn"><i class="bi bi-search"></i></button>
+    <div class="buttons">
+      <button class="randBtn">Случайное слово</button>
+      <button class="uniqChars">
+        <i class="bi bi-alphabet"></i>
+      </button>
+      <button class="vowels3Btn">
+        <i class="bi bi-3-circle"></i>
+        <span>гласные</span>
+      </button>
+      <button class="vowels2Btn">
+        <i class="bi bi-2-circle"></i>
+        <span>гласные</span>
+      </button>
+      <button class="resetBtn"><i class="bi bi-x-circle"></i></button>
+    </div>
+  </div>
+  <div class="abc">
+    <div>
+      <h2>Присутствующие буквы</h2>
+      <div class="chars charsTrue"></div>
+    </div>
+    <div>
+      <h2>Отсутствующие буквы</h2>
+      <div class="chars charsFalse"></div>
+    </div>
+    <div>
+      <span class="has">слово</span> - уже было в игре
+      <br>
+      <span class="green">слово</span> - точно существительное
+    </div>
+    <div>
+      <h4 class="stats">Статистика <i class="bi bi-chevron-down"></i></h4>
+      <table>
+        <thead>
+        <tr>
+          <th>Буква</th>
+          <th>Всего</th>
+          <th>Слов</th>
+          <th>1б</th>
+          <th>2б</th>
+          <th>3б</th>
+          <th>4б</th>
+          <th>5б</th>
+        </tr>
+        </thead>
+        <tbody class="statistic"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="words"></div>
+</div>
+<script src="check.js"></script>
+</body>
+</html>
