@@ -12,14 +12,14 @@ console.log(data.length, words.length)
 
 fs.writeFileSync("./words_2.json", JSON.stringify(words), "utf-8");
 
-// feb 1 - feb 29
-//const average = [133, 88, 49, 74, 179, 14, 16, 262, 45, 345, 246, 209, 43, 347, 299, 539, 11, 218, 138, 30, 200, 213, 120, 236, 96, 541, 299, 194];
-//let sum = 0;
-//average.forEach(n => sum += n);
-//console.log(sum / average.length);
+ //feb 1 - feb 29
+const averageFeb = [133, 88, 49, 74, 179, 14, 16, 262, 45, 345, 246, 209, 43, 347, 299, 539, 11, 218, 138, 30, 200, 213, 120, 236, 96, 541, 299, 194];
+let sum = 0;
+averageFeb.forEach(n => sum += n);
+console.log("feb", sum / averageFeb.length);
 
-// feb 20 - feb 29
-//const averageCheck = [144, 35, 206, 219, 126, 242, 102, 547, 305, 200];
-//let sumCheck = 0;
-//averageCheck.forEach(n => sumCheck += n);
-//console.log(sumCheck / averageCheck.length);
+ //feb 20 - feb 29
+const averageFebCheck = [144, 35, 206, 219, 126, 242, 102, 547, 305, 200];
+let sumCheck = 0;
+averageFebCheck.forEach(n => sumCheck += n);
+console.log("check feb", sumCheck / averageFebCheck.length);
