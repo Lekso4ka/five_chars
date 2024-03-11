@@ -209,6 +209,18 @@ button {
     border: 1px solid;
     padding: 0 6px;
 }
+.test {
+    color: greenyellow;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 0 6px;
+}
+.strange {
+    color: brown;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 0 6px;
+}
 .tooltip {
     position: absolute;
     bottom: -7px;

@@ -36,7 +36,7 @@ fetch("./words.json")
     //fetch("./v1/words.json")
     .then(res => res.json())
     .then(words => {
-        words = words.filter(w => !bedWords.includes(w) && !pastWords.includes(w) && !past.includes(w) && !isWords.includes(w))
+        words = words.filter(w => !bedWords.includes(w) && !pastWords.includes(w) && !past.includes(w) && !isWords.includes(w) && !testWords.includes(w));
         words.sort();
         words.forEach(w => {
             for (let i = 0; i < w.length; i++) {
