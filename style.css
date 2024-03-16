@@ -204,21 +204,17 @@ button {
     padding: 0 6px;
 }
 .green {
-    color: green;
+    color: forestgreen;
     font-weight: bold;
     border: 1px solid;
     padding: 0 6px;
 }
 .test {
-    color: greenyellow;
-    font-weight: bold;
-    border: 1px solid;
+    color: mediumseagreen;
     padding: 0 6px;
 }
 .strange {
     color: brown;
-    font-weight: bold;
-    border: 1px solid;
     padding: 0 6px;
 }
 .tooltip {
@@ -251,7 +247,7 @@ thead th {
     cursor: pointer;
 }
 thead th.ASC {
-    color: green;
+    color: forestgreen;
 }
 thead th.DSC {
     color: red;
@@ -267,4 +263,8 @@ thead th.DSC {
 
 .stats.active+table {
     display: table;
+}
+.mark {
+    display: grid;
+    gap: 10px;
 }
