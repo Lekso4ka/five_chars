@@ -209,12 +209,20 @@ button {
     border: 1px solid;
     padding: 0 6px;
 }
+.del {
+    border: 1px solid;
+    padding: 0 6px;
+}
 .test {
     color: mediumseagreen;
     padding: 0 6px;
 }
 .strange {
     color: brown;
+    padding: 0 6px;
+}
+.name {
+    color: deepskyblue;
     padding: 0 6px;
 }
 .tooltip {

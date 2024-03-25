@@ -156,6 +156,12 @@ const setWords = (tag, arr) => {
         if (strangeWords.includes(w)) {
             return `<span class="strange">${w}</span>`
         }
+        if (names.includes(w)) {
+            return `<span class="name">${w}</span>`
+        }
+        if (rm.includes(w)) {
+            return `<span class="del">${w}</span>`
+        }
         return `<span>${w}</span>`
     });
     tag.innerHTML = result.join("");
