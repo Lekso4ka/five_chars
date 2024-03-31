@@ -23,3 +23,23 @@ const averageFebCheck = [144, 35, 206, 219, 126, 242, 102, 547, 305, 200];
 let sumCheck = 0;
 averageFebCheck.forEach(n => sumCheck += n);
 console.log("check feb", sumCheck / averageFebCheck.length);
+
+
+/***********/
+sum = 0;
+sumCheck = 0;
+//mar 1 - mar 31
+const averageMar = [
+    134,93,717,305,410,128,348,542,355,23,221,172,317,246,281,119,86,39,160,49,482,202,355,146,257,359,237,142,322,398,128
+];
+
+averageMar.forEach(n => sum += n);
+console.log("mar", sum / averageMar.length);
+
+//mar 1 - mar 31
+const averageMarCheck = [
+    140,99,723,311,416,134,354,547,361,28,225,248,358,258,699,485,554,120,385,338,737,339,973,228,343,511,245,148,332,414,132
+];
+
+averageMarCheck.forEach(n => sumCheck += n);
+console.log("check mar", sumCheck / averageMarCheck.length);
