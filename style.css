@@ -236,8 +236,85 @@ thead th.DSC {
     display: grid;
     gap: 10px;
 }
-
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    background: rgba(192, 192, 192, 0.4);
+    backdrop-filter: blur(1px);
+    align-items: center;
+    justify-content: center;
+}
+.popup-wrapper.active {
+    display: flex;
+}
+.info {
+    cursor: pointer;
+    position: absolute;
+    border: 1px solid silver;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    width: 90vw;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow: auto;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 18px;
+    display: grid;
+    gap: 20px;
+    position: relative;
+}
+.popup button {
+    cursor: pointer;
+    border: 1px solid silver;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+.close-popup {
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+.popup h2 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+.popup p {
+    margin: 0;
+}
 @media (max-width: 700px) {
+    .popup {
+        padding: 20px;
+        font-size: 12px;
+        gap: 10px;
+    }
+    .popup h2 {
+        font-size: 20px;
+    }
     .vowels2Btn :not(:first-child) {
         display: none;
     }
@@ -342,5 +419,8 @@ thead th.DSC {
     }
     .name {
         color: black;
+    }
+    .info {
+        right: 8px;
     }
 }

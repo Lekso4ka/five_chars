@@ -18,6 +18,21 @@ const charsT = document.getElementsByClassName("char_t");
 let totalWords = [];
 const hash = {};
 
+const infoBtn = document.querySelector(".info");
+const closeInfo = document.querySelector(".close-popup");
+const popup = document.querySelector(".popup-wrapper");
+
+infoBtn.addEventListener("click", e => {
+	popup.classList.add("active");
+})
+popup.addEventListener("click", e => {
+	if (e.target === popup) {
+		popup.classList.remove("active")
+	}
+})
+closeInfo.addEventListener("click", e => {
+	popup.classList.remove("active")
+})
 document.querySelector(".stats").addEventListener("click", (e) => {
 	e.currentTarget.classList.toggle("active");
 	if (e.currentTarget.classList.contains("active")) {
