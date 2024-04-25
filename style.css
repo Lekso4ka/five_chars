@@ -328,4 +328,17 @@ thead th.DSC {
         height: 20px;
         line-height: 20px;
     }
+    .green {
+        color: black;
+        border: none;
+    }
+    .test {
+        color: black;
+    }
+    .strange {
+        color: black;
+    }
+    .name {
+        color: black;
+    }
 }
