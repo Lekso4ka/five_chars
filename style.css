@@ -42,7 +42,7 @@ button {
     text-align: center;
     font-size: 24px;
 }
-.caption>span {
+.caption>span:first-child {
     font-weight: bold;
 }
 
@@ -126,43 +126,6 @@ button {
         font-size: 20px;
     }
 }
-@media (max-width: 700px) {
-    .vowels2Btn :not(:first-child) {
-        display: none;
-    }
-    .vowels3Btn :not(:first-child) {
-        display: none;
-    }
-    .vowels4Btn :not(:first-child) {
-        display: none;
-    }
-    .wrapper {
-        grid-template-columns: 1fr;
-        height: auto;
-        min-height: 100vh;
-        padding: 20px;
-    }
-    .caption {
-        grid-column-end: span 1;
-    }
-    .mask {
-        grid-column-end: span 1;
-    }
-    h2 {
-        text-align: center;
-        font-size: 20px;
-    }
-    .chars {
-        grid-template-columns: repeat(11, auto);
-        justify-content: center;
-        gap: 8px;
-    }
-    .char {
-        width: 20px;
-        height: 20px;
-        font-size: 16px;
-    }
-}
 
 .abc {
     display: grid;
@@ -201,29 +164,26 @@ button {
 .has {
     color: orange;
     font-weight: bold;
+}
+.words span {
     padding: 0 6px;
 }
 .green {
     color: forestgreen;
     font-weight: bold;
     border: 1px solid;
-    padding: 0 6px;
 }
 .del {
     border: 1px solid;
-    padding: 0 6px;
 }
 .test {
     color: mediumseagreen;
-    padding: 0 6px;
 }
 .strange {
     color: brown;
-    padding: 0 6px;
 }
 .name {
     color: deepskyblue;
-    padding: 0 6px;
 }
 .tooltip {
     position: absolute;
@@ -275,4 +235,97 @@ thead th.DSC {
 .mark {
     display: grid;
     gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .vowels2Btn :not(:first-child) {
+        display: none;
+    }
+    .vowels3Btn :not(:first-child) {
+        display: none;
+    }
+    .vowels4Btn :not(:first-child) {
+        display: none;
+    }
+    .wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100vh;
+        padding: 10px;
+        gap: 16px;
+        justify-content: center;
+    }
+    .mark {
+        display: none;
+    }
+    .caption {
+        grid-column-end: span 1;
+    }
+    .caption span:nth-child(2) {
+        display: none;
+    }
+    .mask button {
+        height: 30px;
+        font-size: 16px;
+    }
+    .mask input {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    .mask .buttons {
+        flex-wrap: wrap;
+        width: 240px;
+    }
+    .buttons button {
+        width: 40px;
+    }
+    .buttons .randBtn {
+        width: 240px;
+    }
+    .buttons button:last-child {
+        display: none;
+    }
+    .mask {
+        grid-column-end: span 1;
+    }
+    h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .abc {
+        padding-right: 0;
+        gap: 0
+    }
+    .abc>:first-child {
+        margin-bottom: 20px;
+    }
+    .abc>:nth-child(2) {
+        padding-bottom: 8px;
+    }
+    .chars {
+        grid-template-columns: repeat(11, auto);
+        justify-content: center;
+        gap: 8px;
+    }
+    .char {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .char .tooltip {
+        display: none;
+    }
+    .abc>:last-child {
+        display: none;
+    }
+    .words {
+        font-size: 14px;
+        gap: 8px;
+    }
+    .words span {
+        padding: 0 4px;
+        height: 20px;
+        line-height: 20px;
+    }
 }

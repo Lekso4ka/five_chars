@@ -134,7 +134,7 @@ const setStatistic = (arr) => {
     createTable(hash, sort);
 }
 const setCaption = (tag, arr) => {
-    tag.innerHTML = `Найдено <span>${arr.length}</span> ${pluralize(arr.length, "подходящих", "подходящее", "подходящих")} ${pluralize(arr.length, "слов", "слово", "слова")}`;
+    tag.innerHTML = `Найдено <span>${arr.length}</span> <span>${pluralize(arr.length, "подходящих", "подходящее", "подходящих")}</span> ${pluralize(arr.length, "слов", "слово", "слова")}`;
 }
 
 
