@@ -254,6 +254,8 @@ thead th.DSC {
         padding: 10px;
         gap: 16px;
         justify-content: center;
+        align-content: flex-start;
+        grid-template-rows: auto auto auto 1fr;
     }
     .mark {
         display: none;
