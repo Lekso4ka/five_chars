@@ -248,6 +248,7 @@ thead th.DSC {
     backdrop-filter: blur(1px);
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .popup-wrapper.active {
     display: flex;
@@ -265,11 +266,12 @@ thead th.DSC {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 .popup {
     width: 90vw;
     max-width: 600px;
-    max-height: 90vh;
+    max-height: 70vh;
     overflow: auto;
     background: #fff;
     padding: 30px;
@@ -314,6 +316,9 @@ thead th.DSC {
     }
     .popup h2 {
         font-size: 20px;
+    }
+    .popup .close-popup {
+        border-radius: 50%;
     }
     .vowels2Btn :not(:first-child) {
         display: none;
