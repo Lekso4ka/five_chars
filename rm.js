@@ -62,3 +62,22 @@ const averageAprCheck = [
 
 averageAprCheck.forEach(n => sumCheck += n);
 console.log("check apr", sumCheck / averageAprCheck.length);
+
+/***********/
+sum = 0;
+sumCheck = 0;
+//May 1 - May 31
+const averageMay = [
+    31,101,39,91,39,43,41,42,7,21,13,57,5,55,73,22,22,21,13,19,13,18,12,26,14,28,9,9,12,8,10
+];
+
+averageMay.forEach(n => sum += n);
+console.log("May", sum / averageMay.length);
+
+//May 1 - May 31
+const averageMayCheck = [
+    55,107,36,95,43,47,39,42,7,25,16,62,7,61,77,26,26,25,17,22,17,22,16,30,18,31,13,13,16,12,2
+];
+
+averageMayCheck.forEach(n => sumCheck += n);
+console.log("check May", sumCheck / averageMayCheck.length);
