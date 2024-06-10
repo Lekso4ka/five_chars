@@ -69,7 +69,6 @@ const setStatistic = (arr) => {
         val: null
     }
     const cells = document.querySelectorAll("thead th");
-    console.log(cells)
     const cellsData = ["chars", "all", "words", "0", "1", "2", "3", "4"];
     cells.forEach((c, i) => {
         if (c.classList.contains("ASC")) {
@@ -105,7 +104,6 @@ const setStatistic = (arr) => {
             hash[char][i]++;
         }
     })
-    console.log(hash);
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", (e) => {
             if (sort.type === cellsData[i]) {
