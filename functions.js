@@ -148,9 +148,6 @@ const setWords = (tag, arr) => {
         if (isWords.includes(w)) {
             return `<span class="green">${w}</span>`
         }
-        if (testWords.includes(w)) {
-            return `<span class="test">${w}</span>`
-        }
         return `<span>${w}</span>`
     });
     tag.innerHTML = result.join("");

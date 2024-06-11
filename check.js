@@ -12,7 +12,7 @@ const uniqBtn = maskTag.querySelector(".uniqChars");
 const wordsTag = document.querySelector(".words");
 const abcTrue = document.querySelector(".charsTrue");
 const abcFalse = document.querySelector(".charsFalse");
-const abc = "авгдеилмнорт";
+const abc = "абвгдежзийклмнопрстуфхцчшщьыюя";
 const charsF = document.getElementsByClassName("char_f");
 const charsT = document.getElementsByClassName("char_t");
 let totalWords = [];
@@ -36,7 +36,7 @@ fetch("./words.json")
     //fetch("./v1/words.json")
     .then(res => res.json())
     .then(words => {
-        words = words.filter(w => !bedWords.includes(w) && !pastWords.includes(w) && !past.includes(w) && !isWords.includes(w) && !testWords.includes(w));
+        words = words.filter(w => !bedWords.includes(w) && !pastWords.includes(w) && !past.includes(w) && !isWords.includes(w));
         words.sort();
         words.forEach(w => {
             for (let i = 0; i < w.length; i++) {
