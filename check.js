@@ -51,8 +51,10 @@ fetch("./words.json")
             const txt = charsT[i].innerText.toLowerCase();
             const tooltip = document.createElement("span");
             tooltip.className = "tooltip";
-            tooltip.innerText = hash[txt];
-            charsT[i].append(tooltip);
+            if (hash[txt]) {
+                tooltip.innerText = hash[txt];
+                charsT[i].append(tooltip);
+            }
         }
         totalWords = [...words];
         findWords = findByChars(words);
